@@ -21,12 +21,21 @@
   <body>
     <!-- Хедер -->
 
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="nav">
           <a href="./index.html" class="web-logo link"
             >Web<span class="studio-logo">Studio</span></a
           >
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="burger-menu" width="32" height="22">
+              <use href="./images/icons.svg#burger-menu"></use>
+            </svg>
+          </button>
           <ul class="list nav-list">
             <li class="item">
               <a href="./index.html" class="nav-link link active">Studio</a>
@@ -54,7 +63,7 @@
           </ul>
         </address>
       </div>
-    </header> -->
+    </header>
 
     <!-- Основний текст сторінки -->
 
@@ -696,9 +705,101 @@
       </div>
     </div>
 
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button
+        class="menu-toggle js-close-menu"
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="burger-menu" width="32" height="22">
+          <use href="./images/icons.svg#burger-menu"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="item"><a href="./index.html" class="link">Studio</a></li>
+        <li class="item">
+          <a href="./portfolio.html" class="link">Portfolio</a>
+        </li>
+        <li class="item"><a href="" class="link">Contacts</a></li>
+      </ul>
+      <ul class="mobile- list">
+        <li class="item">
+          <a href="tel:110001111111" class="link">+11 (000) 111-11-11</a>
+        </li>
+        <li class="item">
+          <a href="mailto:info@devstudio.com" class="link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-menu social-list list">
+        <li class="social-item item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram-icon"
+          >
+            <svg class="social-icon icon" width="16" height="16">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter-icon"
+          >
+            <svg class="social-icon icon" width="16" height="16">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook-icon"
+          >
+            <svg class="social-icon icon" width="16" height="16">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Linkedin-icon"
+          >
+            <svg class="social-icon icon" width="16" height="16">
+              <use href="./images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <!-- JAVA SCRIPT -->
 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
