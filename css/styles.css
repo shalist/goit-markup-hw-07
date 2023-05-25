@@ -116,16 +116,23 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
-  display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
-
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .header-container {
+    display: flex;
+  }
+}
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 /**
@@ -146,6 +153,11 @@ img {
   margin-right: auto;
 }
 @media only screen and (min-width: 768px) {
+  .web-logo {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
   .web-logo {
     margin-right: 76px;
   }
@@ -238,8 +250,6 @@ address {
 }
 .contact {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
 
   color: var(--main-text-color);
   font-weight: 400;
@@ -247,6 +257,12 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .contact {
+    font-size: 12px;
+  }
 }
 .contact:hover,
 .contact:focus {
@@ -261,8 +277,18 @@ address {
     display: none;
   }
 }
-.contact-list > .item {
-  margin-right: 40px;
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .contact-list {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+    max-width: 119px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .contact-list > .item {
+    margin-right: 40px;
+  }
 }
 
 .contact-list > .item:last-child {
@@ -1029,7 +1055,7 @@ address {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding-left: 40px;
   background-color: var(--primary-bg-color);
   z-index: 999;
 
@@ -1045,7 +1071,7 @@ address {
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: var(--primary-bg-color);
 }
 
 .mobile-menu {
@@ -1053,11 +1079,14 @@ address {
   margin: 0;
   list-style: none;
 }
+.mobile-menu.social-list {
+  justify-content: start;
+  gap: 56px;
+}
 
 .mobile-menu .link {
   display: block;
-  padding: 10px;
-  color: #fff;
+  color: var(--dark-accent);
   text-decoration: none;
 }
 
@@ -1065,6 +1094,28 @@ address {
   stroke: var(--dark-accent);
 }
 
+.nav-menu {
+  margin-top: 80px;
+}
+.text-item-menu {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.contact-menu {
+  margin-top: auto;
+}
+.mail-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.mobile-menu.social-list a {
+  display: flex;
+}
 /**
   |============================
   | PORTFOLIO
