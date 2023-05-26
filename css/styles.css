@@ -94,6 +94,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .text {
@@ -1091,9 +1093,8 @@ address {
   display: block;
   color: var(--dark-accent);
 }
-.mobile-menu .link:hover,
-.mobile-menu .link:focus {
-  color: var(--hover-focus-color);
+.mobile-accent .link {
+  color: var(--accent-color);
 }
 .mobile-menu .contact-link {
   color: var(--accent-color);
